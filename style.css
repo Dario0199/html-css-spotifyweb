@@ -120,19 +120,29 @@ aside .logo{
 }
 
 /* header */
-.header{
+header{
    float: left;
-   background: blueviolet;
+   background: rgba(0, 0, 0, 0.507);
    width: 85%;
    height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-right: 10px;
 }
 
+
+
+.H-button{
+    
+}
+
+/* main content */
 main{
     width: 85%;
     height: clac(100vh - 100px);
     float: left;
     background: white;
-    
     overflow: auto;
 }
 
