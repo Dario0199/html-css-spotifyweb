@@ -231,8 +231,8 @@ body{
     padding: 10px;
 }
 
+/* left */
 .footer-album{
-    width: 240px;
     display: flex;
 }
 
@@ -269,3 +269,58 @@ body{
 .list-footer-album li:last-child i{
     margin-left: 10px;
 }
+
+/* center */
+.footer-controller{
+    width: 50%;
+}
+
+.list-footer-controller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.list-footer-controller i{
+    font-size: 15px;
+    margin: 0 20px;
+    color: white;
+}
+
+.list-footer-controller li:nth-child(3) i{
+    font-size: 25px;
+}
+
+.bottom-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.bottom-bar .progress-bar{
+    width: 400px;
+    height: 3px;
+    background: grey;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    color: white;
+}
+
+.bottom-bar li:first-child,
+.bottom-bar li:last-child{
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    margin: 0 10px;
+}
+
+/* right */
