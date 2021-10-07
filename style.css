@@ -35,10 +35,15 @@ body{
     flex-grow: 1;
 }
 
-.logo{
+.Blogo{
     width: 120px;
     margin-bottom: 20px;
 }
+
+.Slogo{
+    display: none;
+}
+
 
 .menu ul{
     list-style: none;
@@ -54,9 +59,19 @@ body{
     width: 20px;
 }
 
+.Home .M-txt{
+    color: white;
+    font-weight: 600;
+}
+
 .M-txt {
     margin-left: 10px;
     font-size: 12px;
+}
+
+.M-txt:hover{
+    color: white;
+    font-weight: 600;
 }
 
 .playlist{
@@ -81,9 +96,18 @@ body{
     margin-left: 10px;
 }
 
+.add-pl:hover{
+    color: white;
+}
+
 .list-pl {
     font-size: 12px;
+    font-weight: 600;
     list-style: none;
+}
+
+.list-pl li:hover{
+    color: white;
 }
 
 .list-pl li {
@@ -95,11 +119,12 @@ body{
 /* sidebar bottom */
 .aside-bottom{
     height: 80px;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-end;
 }
 
 .account {
-    bottom: 10px;
-    left: 10px;
     width: 90%;
 }
 
@@ -107,6 +132,10 @@ body{
     padding-bottom: 5px;
     font-size: 12px;
     border-bottom: 1px solid grey;
+}
+
+.download:hover{
+    color: white;
 }
 
 .name-account {
@@ -147,24 +176,47 @@ body{
     align-items: center;
 } 
 
+.button-Tb{
+    width: 180px;
+    height: 35px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-Tb:hover{
+    width: 190px;
+    height: 45px;
+    font-size: 11px;
+}
+
 /* nav */
 .nav-menu{
     height: 70px;
-    
-    
 }
 
 .nav-menu ul{
     display: flex;
     justify-content: center;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-menu ul li{
     margin-right: 10px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
+}
+
+.nav-menu ul li:hover{
+    color: white;
 }
 
 .nav-menu li:first-child{
@@ -172,10 +224,6 @@ body{
 }
 
 /* content-album */
-.container-album{
-    
-}
-
 .section-album{
     margin-bottom: 30px;
 }
@@ -198,6 +246,7 @@ body{
     height: auto;
     width: calc(100% / 6 - 15px);
     margin-right: 15px;
+    margin-bottom: 5px;
     list-style: none;
     justify-content: space-between;
     text-align: center;
@@ -206,6 +255,47 @@ body{
 .album img{
     width: 100%;
     height: auto;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.0);
+
+}
+
+.round .card::before{
+    border-radius: 50%;
+}
+
+.card:hover::before{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.card i{
+    position: absolute; 
+    z-index: 4;
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, .6);
+    filter: opacity(0.0);
+    
+}
+
+.card:hover i{
+    filter: opacity(1);
 }
 
 .album h4{
@@ -234,6 +324,7 @@ body{
 /* left */
 .footer-album{
     display: flex;
+    width: 20%;
 }
 
 .list-footer-album{
@@ -252,6 +343,7 @@ body{
 
 .list-footer-album li:nth-child(2){
     margin-left: 7px;
+
 }
 
 .list-footer-album li:nth-child(2) h6{
@@ -263,7 +355,7 @@ body{
 }
 
 .list-footer-album li:last-child{
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .list-footer-album li:last-child i{
@@ -284,7 +376,7 @@ body{
 
 .list-footer-controller i{
     font-size: 15px;
-    margin: 0 20px;
+    margin: 0 10px;
     color: white;
 }
 
@@ -305,7 +397,7 @@ body{
     width: 50%;
 }
 
-.bottom-bar .progress-bar{
+.bottom-bar .progress-bar-controller{
     width: 100%;
     height: 3px;
     background: grey;
@@ -313,11 +405,32 @@ body{
     position: relative;
 }
 
+.progress-bar-controller .progress{
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar-controller .progress i{
+    font-size: 10px;
+    margin-left: 100%;
+    color: white;
+    filter: opacity(0.0);
+}
+
 .progress{
     position: absolute;
     width: 20%;
     height: 100%;
     background: white;
+}
+
+.progress:hover{
+    background: yellowgreen;
+    filter: opacity(1);
+}
+
+.progress i:hover{
+    filter: opacity(1);
 }
 
 .bottom-bar li:first-child,
@@ -329,3 +442,140 @@ body{
 }
 
 /* right */
+.footer-audio{
+    width: 15%;
+    
+}
+
+.list-footer-audio{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.list-footer-audio li{
+    font-size: 10px;
+    color: white;
+    margin-left: 10px;
+   
+}
+
+.list-footer-audio li:last-child{
+    width: 100%;
+}
+
+.progress-bar-audio{
+    width: 100%;
+    height: 3px;
+    background: grey;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* media queres */
+@media screen and (max-width: 1024px){
+    .list-album .album{
+        height: auto;
+        width: calc(100% / 4 - 15px);
+        margin-right: 15px;
+        list-style: none;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .footer-audio{
+        width: 150px;
+        flex-shrink: 0;
+    }
+
+    .list-footer-album{
+        width: 150px;
+        flex-shrink: 0;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .list-album .album{
+        height: auto;
+        width: calc(100% / 2 - 15px);
+        margin-right: 15px;
+        list-style: none;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .footer-controller{
+        width: 290px;
+        flex-shrink: 0;
+    }
+    
+}
+
+@media screen and (max-width: 468px){
+    .list-album .album{
+        height: auto;
+        width: calc(100% / 2 - 15px);
+        margin-right: 15px;
+        list-style: none;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .sidebar{
+        background: black;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+
+    .Blogo{
+        display: none;
+    }
+
+    .Slogo{
+        display: block;
+        margin: -5px 10px 10px -2px;
+        width: 25px;
+    }
+
+    .menu img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .M-txt{
+        display: none;
+    }
+
+    .playlist{
+        display: none;
+    }
+
+    .download{
+        border: none;
+    }
+    
+    .download span{
+        display: none;
+    }
+
+    .name-account span{
+        display: none;
+    }
+    
+    
+    .list-footer-album li:last-child{
+        margin-left: 5px;
+    }    
+    
+}
+
+@media screen and (max-width: 468px){
+
+}
